@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.6.1/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <button class="btn" onclick="target_modal.showModal()">Toggle</button>
+
+    <dialog id="target_modal" class="modal modal-open">
+      <div class="modal-box pt-2">
+        <div
+          class="flex justify-between items-center mb-4 pb-2 border-b border-gray-400">
+          <h3 class="text-[18px] font-semibold">Update Product</h3>
+
+          <!-- Close Button -->
+          <form method="dialog" class="modal-backdrop">
+            <button class="btn btn-circle btn-ghost">Close</button>
+          </form>
+        </div>
+
+        <form class="flex flex-col gap-4">
+          <!-- Cover Input -->
+          <label class="flex flex-col gap-2">
+            <span>Upload Avatar</span>
+            <div class="grid grid-cols-[120px_auto] gap-4">
+              <div
+                class="avatar w-[120px] h-[120px] rounded-full border border-gray-400"></div>
+              <div class="flex flex-col gap-2">
+                <div>
+                  <input
+                    type="file"
+                    class="file-input file-input-md file-input-bordered w-full max-w-xs" />
+                  <span class="text-[14px] opacity-70"
+                    >SVG, PNG, JPG or GIF (MAX 800x400px)</span
+                  >
+                </div>
+                <div>
+                  <button class="btn btn-sm">Upload new picture</button>
+                  <button class="btn btn-sm">Delete</button>
+                </div>
+              </div>
+            </div>
+          </label>
+
+          <!-- Inputs -->
+          <div class="grid grid-cols-2 gap-4">
+            <label for="name" class="flex flex-col gap-2">
+              <span>Name</span>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Enter Name"
+                class="input input-bordered" />
+            </label>
+
+            <label for="name" class="flex flex-col gap-2">
+              <span>Select</span>
+              <select class="select select-bordered">
+                <option>Please Select Product</option>
+              </select>
+            </label>
+
+            <label for="name" class="flex flex-col gap-2">
+              <span>Name</span>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                class="input input-bordered" />
+            </label>
+
+            <label for="name" class="flex flex-col gap-2">
+              <span>Name</span>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                class="input input-bordered" />
+            </label>
+          </div>
+
+          <div class="flex flex-col gap-2">
+            <span class="">Roles</span>
+            <div class="flex gap-2">
+              <label for="name" class="flex gap-2 items-center">
+                <input
+                  type="checkbox"
+                  id="name"
+                  name="name"
+                  class="checkbox checkbox-sm" />
+                <span class="text-[14px]">Admin</span>
+              </label>
+
+              <label for="name" class="flex gap-2 items-center">
+                <input
+                  type="checkbox"
+                  id="name"
+                  name="name"
+                  class="checkbox checkbox-sm" />
+                <span class="text-[14px]">Admin</span>
+              </label>
+
+              <label for="name" class="flex gap-2 items-center">
+                <input
+                  type="checkbox"
+                  id="name"
+                  name="name"
+                  class="checkbox checkbox-sm" />
+                <span class="text-[14px]">Admin</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Description -->
+          <label class="flex flex-col gap-2">
+            <span>Biography</span>
+            <textarea
+              class="textarea textarea-bordered h-[150px]"
+              placeholder="Description"></textarea>
+          </label>
+
+          <div class="flex justify-start gap-4 items-center">
+            <button
+              class="bg-primary px-4 py-[6px] border rounded-[5px] w-[100px] px-6 btn-primary">
+              Update
+            </button>
+            <button
+              class="border-error px-4 py-[6px] border-2 rounded-[5px] w-[100px] px-6">
+              Delete
+            </button>
+          </div>
+        </form>
+      </div>
+      <form method="dialog" class="modal-backdrop">
+        <button>close</button>
+      </form>
+    </dialog>
+  </body>
+</html>
