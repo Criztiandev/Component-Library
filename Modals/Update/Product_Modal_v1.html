@@ -11,13 +11,18 @@
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
-    <button class="btn" onclick="target_modal.showModal()">Toggle</button>
+    <button
+      class="bg-primary px-4 py-[12px] border rounded-[5px] max-w-sm px-6 text-white"
+      onclick="target_modal.showModal()">
+      Toggle
+    </button>
 
     <dialog id="target_modal" class="modal">
       <div class="modal-box pt-2">
         <div
           class="flex justify-between items-center mb-4 pb-2 border-b border-gray-400">
-          <h3 class="text-[18px] font-semibold">Update Product</h3>
+          <!-- Title -->
+          <h2 class="text-[22px] font-semibold">Create Form</h2>
 
           <!-- Close Button -->
           <form method="dialog" class="modal-backdrop">
@@ -28,66 +33,72 @@
         <form class="flex flex-col gap-4">
           <!-- Inputs -->
           <div class="grid grid-cols-2 gap-4">
-            <label for="name" class="flex flex-col gap-2">
-              <span>Name</span>
+            <label for="field-1" class="flex flex-col gap-2">
+              <span class="text-base font-semibold">Field 1</span>
               <input
                 type="text"
-                id="name"
-                name="name"
-                placeholder="Enter Name"
+                id="field-1"
+                name="field-1"
+                placeholder="Enter your field name"
                 class="input input-bordered" />
             </label>
 
-            <label for="name" class="flex flex-col gap-2">
-              <span>Name</span>
+            <!-- Inputs -->
+            <label for="field-2" class="flex flex-col gap-2">
+              <span class="text-base font-semibold">Field 2</span>
               <input
                 type="text"
-                id="name"
-                name="name"
-                class="input input-bordered" />
+                id="field-2"
+                name="field-2"
+                class="input input-bordered"
+                placeholder="Enter your field name" />
             </label>
 
-            <label for="name" class="flex flex-col gap-2">
-              <span>Name</span>
+            <!-- Inputs -->
+            <label for="field-3" class="flex flex-col gap-2">
+              <span class="text-base font-semibold">Field 3</span>
               <input
                 type="text"
-                id="name"
-                name="name"
-                class="input input-bordered" />
+                id="field-3"
+                name="field-3"
+                class="input input-bordered"
+                placeholder="Enter your field name" />
             </label>
 
-            <label for="name" class="flex flex-col gap-2">
-              <span>Name</span>
+            <!-- Inputs -->
+            <label for="field-4" class="flex flex-col gap-2">
+              <span class="text-base font-semibold">Field 4</span>
               <input
                 type="text"
-                id="name"
-                name="name"
-                class="input input-bordered" />
+                id="field-4"
+                name="field-4"
+                class="input input-bordered"
+                placeholder="Enter your field name" />
             </label>
           </div>
 
           <!-- Description -->
           <label class="flex flex-col gap-2">
-            <span>Description</span>
+            <span class="font-semibold">Description</span>
             <textarea
               class="textarea textarea-bordered h-[150px]"
               placeholder="Description"></textarea>
           </label>
 
-          <div class="flex justify-start gap-4 items-center">
+          <div class="flex justify-start gap-3 items-center font-semibold">
             <button
-              class="bg-primary px-4 py-[6px] border rounded-[5px] w-[100px] px-6 btn-primary">
-              Update
+              class="bg-primary px-6 py-[9px] border rounded-[5px] max-w-sm text-white">
+              Create
             </button>
             <button
-              class="border-error px-4 py-[6px] border-2 rounded-[5px] w-[100px] px-6">
-              Delete
+              class="bg-primary px-6 py-[9px] border rounded-[5px] max-w-sm text-white">
+              Cancel
             </button>
           </div>
         </form>
       </div>
       <form method="dialog" class="modal-backdrop">
-        <button>close</button>
+        <button>Close</button>
       </form>
     </dialog>
   </body>

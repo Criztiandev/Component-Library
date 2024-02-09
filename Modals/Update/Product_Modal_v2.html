@@ -17,7 +17,7 @@
       <div class="modal-box pt-2">
         <div
           class="flex justify-between items-center mb-4 pb-2 border-b border-gray-400">
-          <h3 class="text-[18px] font-semibold">Update Product</h3>
+          <h2 class="text-[22px] font-semibold">Create Form</h2>
 
           <!-- Close Button -->
           <form method="dialog" class="modal-backdrop">
@@ -28,7 +28,7 @@
         <form class="flex flex-col gap-4">
           <!-- Cover Input -->
           <label class="flex flex-col gap-2">
-            <span>Product Image</span>
+            <span class="text-base font-semibold">Field 1</span>
             <div
               class="w-full h-[200px] bg-gray-100 border-2 border-gray-400 border-dashed rounded-[5px] text-base flex justify-center items-center flex-col">
               <span class="opacity-80">
@@ -63,58 +63,68 @@
 
           <!-- Inputs -->
           <div class="grid grid-cols-2 gap-4">
-            <label for="name" class="flex flex-col gap-2">
-              <span>Name</span>
+            <!-- Input 1 -->
+            <label for="field-1" class="flex flex-col gap-2">
+              <span class="text-base font-semibold">Field 1</span>
               <input
                 type="text"
-                id="name"
-                name="name"
-                placeholder="Enter Name"
+                id="field-1"
+                name="field-1"
+                placeholder="Enter your field name"
                 class="input input-bordered" />
             </label>
 
-            <label for="name" class="flex flex-col gap-2">
-              <span>Select</span>
-              <select class="select select-bordered">
-                <option>Please Select Product</option>
-              </select>
-            </label>
-
-            <label for="name" class="flex flex-col gap-2">
-              <span>Name</span>
+            <!-- Input 2 -->
+            <label for="field-1" class="flex flex-col gap-2">
+              <span class="text-base font-semibold">Field 1</span>
               <input
                 type="text"
-                id="name"
-                name="name"
+                id="field-2"
+                name="field-2"
+                placeholder="Enter your field name"
                 class="input input-bordered" />
             </label>
 
-            <label for="name" class="flex flex-col gap-2">
-              <span>Name</span>
+            <!-- Input 3 -->
+            <label for="field-3" class="flex flex-col gap-2">
+              <span class="text-base font-semibold">Field 1</span>
               <input
                 type="text"
-                id="name"
-                name="name"
+                id="field-3"
+                name="field-3"
+                placeholder="Enter your field name"
+                class="input input-bordered" />
+            </label>
+
+            <!-- Input 4 -->
+            <label for="field-4" class="flex flex-col gap-2">
+              <span class="text-base font-semibold">Field 1</span>
+              <input
+                type="text"
+                id="field-4"
+                name="field-4"
+                placeholder="Enter your field name"
                 class="input input-bordered" />
             </label>
           </div>
 
           <!-- Description -->
           <label class="flex flex-col gap-2">
-            <span>Description</span>
+            <span class="font-semibold">Description</span>
             <textarea
               class="textarea textarea-bordered h-[150px]"
               placeholder="Description"></textarea>
           </label>
 
-          <div class="flex justify-start gap-4 items-center">
+          <div class="flex justify-between gap-4 items-center">
             <button
-              class="bg-primary px-4 py-[6px] border rounded-[5px] w-[100px] px-6 btn-primary">
-              Update
+              class="bg-primary font-semibold px-6 py-[9px] border rounded-[5px] w-full text-white">
+              Add Product
             </button>
+
             <button
-              class="border-error px-4 py-[6px] border-2 rounded-[5px] w-[100px] px-6">
-              Delete
+              class="bg-primary font-semibold px-6 py-[9px] border rounded-[5px] w-full text-white">
+              Discard
             </button>
           </div>
         </form>
