@@ -15,192 +15,148 @@
 
     <dialog id="target_modal" class="modal modal-open">
       <div class="modal-box pt-2">
-        <!-- Title -->
         <div
-          class="flex justify-between items-center mb-2 pb-2 border-b border-gray-400">
-          <h3 class="text-[18px] font-semibold">Title Product</h3>
-
+          class="flex justify-between items-center mb-3 pb-1 border-b border-gray-400">
+          <h2 class="text-[22px] font-bold">Create Form</h2>
           <!-- Close Button -->
           <form method="dialog" class="modal-backdrop">
             <button class="btn btn-circle btn-ghost">Close</button>
           </form>
         </div>
 
-        <!-- Form -->
         <form class="flex flex-col gap-4">
-          <!-- First Accordion -->
-          <div class="collapse collapse-arrow">
-            <input type="radio" name="my-accordion-2" />
-
-            <div
-              class="collapse-title text-[18px] text-gray-400 font-medium border-b hover:bg-gray-400">
-              General Info
+          <!-- Cover Input -->
+          <label class="flex flex-col gap-2">
+            <span class="text-base font-semibold">Upload Avatar</span>
+            <div class="grid grid-cols-[120px_auto] gap-4 items-center">
+              <div
+                class="avatar w-[120px] h-[120px] rounded-full border border-gray-400"></div>
+              <div>
+                <input
+                  type="file"
+                  class="file-input file-input-md file-input-bordered w-full max-w-xs" />
+                <span class="text-[14px] opacity-70"
+                  >SVG, PNG, JPG or GIF (MAX 800x400px)</span
+                >
+              </div>
             </div>
-            <div class="collapse-content text-black flex flex-col gap-4">
-              <!-- Cover Input -->
-              <label class="flex flex-col gap-2">
-                <span class="text-base font-semibold">Upload Avatar</span>
-                <div class="grid grid-cols-[120px_auto] gap-4 items-center">
-                  <div
-                    class="avatar w-[120px] h-[120px] rounded-full border border-gray-400"></div>
-                  <div>
-                    <input
-                      type="file"
-                      class="file-input file-input-md file-input-bordered w-full max-w-xs" />
-                    <span class="text-[14px] opacity-70"
-                      >SVG, PNG, JPG or GIF (MAX 800x400px)</span
-                    >
-                  </div>
-                </div>
+          </label>
+
+          <!-- Inputs -->
+          <div class="grid grid-cols-2 gap-4">
+            <label for="firstName" class="flex flex-col gap-2">
+              <span class="text-base font-semibold">Fist Name</span>
+              <input
+                type="text"
+                id="firstName"
+                name="firstName"
+                placeholder="Enter your field name"
+                class="input input-bordered"
+                required />
+            </label>
+
+            <label for="middleName" class="flex flex-col gap-2">
+              <span class="text-base font-semibold">Middle Name</span>
+              <input
+                type="text"
+                id="middleName"
+                name="middleName"
+                placeholder="Enter your field name"
+                class="input input-bordered" />
+            </label>
+
+            <label for="lastName" class="flex flex-col gap-2">
+              <span class="text-base font-semibold">Last Name</span>
+              <input
+                type="text"
+                id="lastName"
+                name="lastName"
+                placeholder="Enter your field name"
+                class="input input-bordered"
+                required />
+            </label>
+
+            <label for="suffix" class="flex flex-col gap-2">
+              <span class="text-base font-semibold">Suffix</span>
+              <select class="select select-bordered" name="suffix" id="suffix">
+                <option value="">Select Suffix</option>
+                <option value="Jr">Jr.</option>
+                <option value="Sr">Sr.</option>
+                <option value="III">III</option>
+              </select>
+            </label>
+
+            <label for="field-1" class="flex flex-col gap-2">
+              <span class="text-base font-semibold">Age</span>
+              <input
+                type="number"
+                id="age"
+                name="age"
+                placeholder="Enter your field name"
+                class="input input-bordered" />
+            </label>
+
+            <label for="suffix" class="flex flex-col gap-2">
+              <span class="text-base font-semibold">Gender</span>
+              <select class="select select-bordered" name="gender" id="gender">
+                <option value="">Select Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="Other">Others</option>
+              </select>
+            </label>
+
+            <label for="field-1" class="flex flex-col gap-2">
+              <span class="text-base font-semibold">Bith Date</span>
+              <input
+                type="date"
+                id="bod"
+                name="bod"
+                placeholder="Enter your field name"
+                class="input input-bordered" />
+            </label>
+          </div>
+
+          <!-- Roles -->
+          <div class="flex flex-col gap-2">
+            <span class="text-base font-semibold">Roles</span>
+            <div class="flex gap-2">
+              <label for="admin" class="flex gap-2 items-center">
+                <input
+                  type="checkbox"
+                  id="admin"
+                  name="admin"
+                  class="checkbox checkbox-sm" />
+                <span class="text-[14px]">Admin</span>
               </label>
 
-              <!-- Inputs -->
-              <div class="grid grid-cols-2 gap-4">
-                <label for="field-1" class="flex flex-col gap-2">
-                  <span class="text-base font-semibold">Field 1</span>
-                  <input
-                    type="text"
-                    id="field-1"
-                    name="field-1"
-                    placeholder="Enter your field name"
-                    class="input input-bordered" />
-                </label>
-
-                <label for="field-1" class="flex flex-col gap-2">
-                  <span class="text-base font-semibold">Field 1</span>
-                  <input
-                    type="text"
-                    id="field-1"
-                    name="field-1"
-                    placeholder="Enter your field name"
-                    class="input input-bordered" />
-                </label>
-
-                <label for="field-1" class="flex flex-col gap-2">
-                  <span class="text-base font-semibold">Field 1</span>
-                  <input
-                    type="text"
-                    id="field-1"
-                    name="field-1"
-                    placeholder="Enter your field name"
-                    class="input input-bordered" />
-                </label>
-
-                <label for="field-1" class="flex flex-col gap-2">
-                  <span class="text-base font-semibold">Field 1</span>
-                  <input
-                    type="text"
-                    id="field-1"
-                    name="field-1"
-                    placeholder="Enter your field name"
-                    class="input input-bordered" />
-                </label>
-              </div>
-
-              <!-- Roles -->
-              <div class="flex flex-col gap-2">
-                <span class="">Roles</span>
-                <div class="flex gap-2">
-                  <label for="name" class="flex gap-2 items-center">
-                    <input
-                      type="checkbox"
-                      id="name"
-                      name="name"
-                      class="checkbox checkbox-sm" />
-                    <span class="text-[14px]">Admin</span>
-                  </label>
-
-                  <label for="name" class="flex gap-2 items-center">
-                    <input
-                      type="checkbox"
-                      id="name"
-                      name="name"
-                      class="checkbox checkbox-sm" />
-                    <span class="text-[14px]">Admin</span>
-                  </label>
-
-                  <label for="name" class="flex gap-2 items-center">
-                    <input
-                      type="checkbox"
-                      id="name"
-                      name="name"
-                      class="checkbox checkbox-sm" />
-                    <span class="text-[14px]">Admin</span>
-                  </label>
-                </div>
-              </div>
-
-              <!-- Description -->
-              <label class="flex flex-col gap-2">
-                <span>Biography</span>
-                <textarea
-                  class="textarea textarea-bordered h-[150px]"
-                  placeholder="Description"></textarea>
+              <label for="user" class="flex gap-2 items-center">
+                <input
+                  type="checkbox"
+                  id="user"
+                  name="user"
+                  class="checkbox checkbox-sm" />
+                <span class="text-[14px]">User</span>
               </label>
             </div>
           </div>
 
-          <!-- Accordion 2 -->
-          <div class="collapse collapse-arrow">
-            <input type="radio" name="my-accordion-2" />
-            <div
-              class="collapse-title text-[18px] text-gray-400 font-medium border-b hover:bg-gray-400">
-              Additional Info
-            </div>
-            <div class="collapse-content text-black">
-              <div class="grid grid-cols-2 gap-4">
-                <label for="field-1" class="flex flex-col gap-2">
-                  <span class="text-base font-semibold">Field 1</span>
-                  <input
-                    type="text"
-                    id="field-1"
-                    name="field-1"
-                    placeholder="Enter your field name"
-                    class="input input-bordered" />
-                </label>
+          <!-- Description -->
+          <label class="flex flex-col gap-2">
+            <span>Biography</span>
+            <textarea
+              class="textarea textarea-bordered h-[150px]"
+              placeholder="Description"></textarea>
+          </label>
 
-                <label for="field-1" class="flex flex-col gap-2">
-                  <span class="text-base font-semibold">Field 1</span>
-                  <input
-                    type="text"
-                    id="field-1"
-                    name="field-1"
-                    placeholder="Enter your field name"
-                    class="input input-bordered" />
-                </label>
-
-                <label for="field-1" class="flex flex-col gap-2">
-                  <span class="text-base font-semibold">Field 1</span>
-                  <input
-                    type="text"
-                    id="field-1"
-                    name="field-1"
-                    placeholder="Enter your field name"
-                    class="input input-bordered" />
-                </label>
-
-                <label for="field-1" class="flex flex-col gap-2">
-                  <span class="text-base font-semibold">Field 1</span>
-                  <input
-                    type="text"
-                    id="field-1"
-                    name="field-1"
-                    placeholder="Enter your field name"
-                    class="input input-bordered" />
-                </label>
-              </div>
-            </div>
-          </div>
-
-          <!-- Actions -->
-          <div class="flex justify-between gap-4 items-center">
+          <div class="flex justify-start gap-4 items-center">
             <button
-              class="bg-primary font-semibold px-6 py-[9px] border rounded-[5px] w-full text-white">
-              Add Product
+              class="bg-primary px-6 py-[9px] border rounded-[5px] w-full text-white font-semibold">
+              Create Profle
             </button>
 
             <button
-              class="bg-primary font-semibold px-6 py-[9px] border rounded-[5px] w-full text-white">
+              class="bg-primary px-6 py-[9px] border rounded-[5px] w-full text-white font-semibold">
               Discard
             </button>
           </div>

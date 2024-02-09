@@ -42,87 +42,108 @@
             </div>
           </label>
 
+          <!-- Inputs -->
           <div class="grid grid-cols-2 gap-4">
-            <!-- Input -->
+            <label for="firstName" class="flex flex-col gap-2">
+              <span class="text-base font-semibold">Fist Name</span>
+              <input
+                type="text"
+                id="firstName"
+                name="firstName"
+                placeholder="Enter your field name"
+                class="input input-bordered"
+                required />
+            </label>
+
+            <label for="middleName" class="flex flex-col gap-2">
+              <span class="text-base font-semibold">Middle Name</span>
+              <input
+                type="text"
+                id="middleName"
+                name="middleName"
+                placeholder="Enter your field name"
+                class="input input-bordered" />
+            </label>
+
+            <label for="lastName" class="flex flex-col gap-2">
+              <span class="text-base font-semibold">Last Name</span>
+              <input
+                type="text"
+                id="lastName"
+                name="lastName"
+                placeholder="Enter your field name"
+                class="input input-bordered"
+                required />
+            </label>
+
+            <label for="suffix" class="flex flex-col gap-2">
+              <span class="text-base font-semibold">Suffix</span>
+              <select class="select select-bordered" name="suffix" id="suffix">
+                <option value="">Select Suffix</option>
+                <option value="Jr">Jr.</option>
+                <option value="Sr">Sr.</option>
+                <option value="III">III</option>
+              </select>
+            </label>
+
             <label for="field-1" class="flex flex-col gap-2">
-              <span class="text-base font-semibold">Field 1</span>
+              <span class="text-base font-semibold">Age</span>
               <input
-                type="text"
-                id="field-1"
-                name="field-1"
+                type="number"
+                id="age"
+                name="age"
                 placeholder="Enter your field name"
                 class="input input-bordered" />
             </label>
 
-            <!-- Input -->
-            <label for="field-2" class="flex flex-col gap-2">
-              <span class="text-base font-semibold">Field 1</span>
-              <input
-                type="text"
-                id="field-2"
-                name="field-2"
-                placeholder="Enter your field name"
-                class="input input-bordered" />
+            <label for="suffix" class="flex flex-col gap-2">
+              <span class="text-base font-semibold">Gender</span>
+              <select class="select select-bordered" name="gender" id="gender">
+                <option value="">Select Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="Other">Others</option>
+              </select>
             </label>
 
-            <!-- Input -->
-            <label for="field-3" class="flex flex-col gap-2">
-              <span class="text-base font-semibold">Field 1</span>
+            <label for="field-1" class="flex flex-col gap-2">
+              <span class="text-base font-semibold">Bith Date</span>
               <input
-                type="text"
-                id="field-3"
-                name="field-3"
-                placeholder="Enter your field name"
-                class="input input-bordered" />
-            </label>
-
-            <!-- Input -->
-            <label for="field-4" class="flex flex-col gap-2">
-              <span class="text-base font-semibold">Field 1</span>
-              <input
-                type="text"
-                id="field-4"
-                name="field-4"
+                type="date"
+                id="bod"
+                name="bod"
                 placeholder="Enter your field name"
                 class="input input-bordered" />
             </label>
           </div>
 
+          <!-- Roles -->
           <div class="flex flex-col gap-2">
-            <span class="text-base font-semibold">Roles</span>
+            <span class="">Roles</span>
             <div class="flex gap-2">
-              <label for="name" class="flex gap-2 items-center">
+              <label for="admin" class="flex gap-2 items-center">
                 <input
                   type="checkbox"
-                  id="name"
-                  name="name"
+                  id="admin"
+                  name="admin"
                   class="checkbox checkbox-sm" />
                 <span class="text-[14px]">Admin</span>
               </label>
 
-              <label for="name" class="flex gap-2 items-center">
+              <label for="user" class="flex gap-2 items-center">
                 <input
                   type="checkbox"
-                  id="name"
-                  name="name"
+                  id="user"
+                  name="user"
                   class="checkbox checkbox-sm" />
-                <span class="text-[14px]">Admin</span>
-              </label>
-
-              <label for="name" class="flex gap-2 items-center">
-                <input
-                  type="checkbox"
-                  id="name"
-                  name="name"
-                  class="checkbox checkbox-sm" />
-                <span class="text-[14px]">Admin</span>
+                <span class="text-[14px]">User</span>
               </label>
             </div>
           </div>
 
           <!-- Description -->
           <label class="flex flex-col gap-2">
-            <span class="font-semibold">Biography</span>
+            <span>Biography</span>
             <textarea
               class="textarea textarea-bordered h-[150px]"
               placeholder="Description"></textarea>
