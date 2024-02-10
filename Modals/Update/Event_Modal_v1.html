@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.6.1/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <button class="btn" onclick="target_modal.showModal()">Toggle</button>
+
+    <dialog id="target_modal" class="modal modal-open">
+      <div class="modal-box pt-2">
+        <div
+          class="flex justify-between items-center mb-3 pb-2 border-b border-gray-400">
+          <h2 class="text-[22px] font-bold">Add new Event</h2>
+          <!-- Close Button -->
+          <form method="dialog" class="">
+            <button class="btn btn-circle btn-ghost">Close</button>
+          </form>
+        </div>
+
+        <form class="flex flex-col gap-4">
+          <!-- Cover Input -->
+
+          <!-- Inputs -->
+          <div class="flex flex-col gap-4">
+            <label for="title" class="flex flex-col gap-2">
+              <span class="text-base font-semibold">Title</span>
+              <input
+                type="text"
+                id="title"
+                name="title"
+                placeholder="Enter your Event title"
+                class="input input-bordered"
+                required />
+            </label>
+
+            <label for="location" class="flex flex-col gap-2">
+              <span class="text-base font-semibold">Location</span>
+              <input
+                type="text"
+                id="location"
+                name="location"
+                placeholder="Enter your field name"
+                class="input input-bordered" />
+            </label>
+
+            <!-- Description -->
+            <label class="flex flex-col gap-2">
+              <span class="font-semibold">Description</span>
+              <textarea
+                class="textarea textarea-bordered h-[150px]"
+                placeholder="Description"></textarea>
+            </label>
+
+            <label for="schedule" class="flex flex-col gap-2">
+              <span class="text-base font-semibold">Schedule</span>
+              <input
+                type="date"
+                id="schedule"
+                name="schedule"
+                placeholder="Enter your field name"
+                class="input input-bordered" />
+            </label>
+
+            <label for="isAllDay" class="flex gap-4">
+              <input
+                type="checkbox"
+                id="isAllDay"
+                name="isAllDay"
+                class="toggle" />
+
+              <span class="text-base font-semibold">All Day</span>
+            </label>
+          </div>
+
+          <div>
+            <label for="location" class="flex flex-col gap-2">
+              <span class="text-base font-semibold">Add members</span>
+              <input
+                type="text"
+                id="location"
+                name="location"
+                placeholder="Enter your field name"
+                class="input input-bordered" />
+            </label>
+
+            <div class="flex justify-between items-center mt-4">
+              <div class="avatar-group -space-x-6 rtl:space-x-reverse w-full">
+                <div class="avatar">
+                  <div class="w-8">
+                    <img
+                      src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                  </div>
+                </div>
+                <div class="avatar">
+                  <div class="w-8">
+                    <img
+                      src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                  </div>
+                </div>
+                <div class="avatar">
+                  <div class="w-8">
+                    <img
+                      src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                  </div>
+                </div>
+                <div class="avatar placeholder">
+                  <div class="w-8 bg-neutral text-neutral-content">
+                    <span>+99</span>
+                  </div>
+                </div>
+              </div>
+              <button
+                class="bg-primary px-4 py-[6px] w-[150px] rounded-[5px] text-white font-semibold">
+                Add guess
+              </button>
+            </div>
+          </div>
+
+          <label for="location" class="flex flex-col gap-2">
+            <span class="text-base font-semibold">Tag Color</span>
+
+            <div>
+              <input
+                type="radio"
+                id="color"
+                name="color"
+                class="radio bg-green-500" />
+              <input
+                type="radio"
+                id="color"
+                name="color"
+                class="radio bg-red-500" />
+              <input
+                type="radio"
+                id="color"
+                name="color"
+                class="radio bg-blue-500" />
+              <input
+                type="radio"
+                id="color"
+                name="color"
+                class="radio bg-yellow-500" />
+              <input
+                type="radio"
+                id="color"
+                name="color"
+                class="radio bg-orange-500" />
+              <input
+                type="radio"
+                id="color"
+                name="color"
+                class="radio bg-pink-500" />
+            </div>
+          </label>
+
+          <div class="flex justify-start gap-4 items-center">
+            <button
+              class="bg-primary px-6 py-[9px] border rounded-[5px] w-full text-white font-semibold">
+              Create Profle
+            </button>
+
+            <button
+              class="bg-primary px-6 py-[9px] border rounded-[5px] w-full text-white font-semibold">
+              Discard
+            </button>
+          </div>
+        </form>
+      </div>
+      <form method="dialog" class="modal-backdrop">
+        <button>close</button>
+      </form>
+    </dialog>
+  </body>
+</html>
