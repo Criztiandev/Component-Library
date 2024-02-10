@@ -31,13 +31,11 @@
   <body>
     <button class="btn" onclick="target_modal.showModal()">Toggle</button>
 
-    <dialog id="target_modal" class="modal">
-      <div class="modal-box p-4">
-        <!-- Title -->
+    <dialog id="target_modal" class="modal modal-open">
+      <div class="modal-box pt-2">
         <div
-          class="flex justify-between items-center mb-2 pb-2 border-b border-gray-400">
-          <h3 class="text-[18px] font-semibold">Title Product</h3>
-
+          class="flex justify-between items-center mb-3 pb-2 border-b border-gray-400">
+          <h2 class="text-lg font-bold">Add new Event</h2>
           <!-- Close Button -->
           <form method="dialog" class="">
             <button class="btn btn-circle btn-ghost">
@@ -46,207 +44,142 @@
           </form>
         </div>
 
-        <!-- Form -->
-        <form class="flex flex-col">
-          <!-- First Accordion -->
-          <div class="border-b">
-            <div class="collapse collapse-arrow">
-              <input type="radio" name="my-accordion-2" />
+        <form class="flex flex-col gap-4">
+          <!-- Cover Input -->
 
-              <div
-                class="collapse-title text-[16px] px-0 text-gray-400 font-semibold rounded-[5px]">
-                General Info
-              </div>
-              <div class="collapse-content px-0 text-black flex flex-col gap-4">
-                <!-- Cover Input -->
-                <label class="flex flex-col gap-2">
-                  <span class="text-base font-semibold">Upload Avatar</span>
-                  <div
-                    class="grid grid-cols-1 gap-4 items-center md:grid-cols-[120px_auto]">
-                    <div
-                      class="avatar w-[120px] h-[120px] rounded-full border border-gray-400"></div>
-                    <div class="flex flex-col gap-2">
-                      <input
-                        type="file"
-                        class="file-input file-input-md file-input-bordered w-full max-w-xs" />
-                      <span class="text-[14px] opacity-70"
-                        >SVG, PNG, JPG or GIF (MAX 800x400px)</span
-                      >
-                    </div>
-                  </div>
-                </label>
+          <!-- Inputs -->
+          <div class="flex flex-col gap-4">
+            <label for="title" class="flex flex-col gap-2">
+              <span class="text-base font-semibold">Title</span>
+              <input
+                type="text"
+                id="title"
+                name="title"
+                placeholder="Enter your Event title"
+                class="input input-bordered"
+                required />
+            </label>
 
-                <!-- Inputs -->
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <label for="firstName" class="flex flex-col gap-2">
-                    <span class="text-base font-semibold">Fist Name</span>
-                    <input
-                      type="text"
-                      id="firstName"
-                      name="firstName"
-                      placeholder="Enter your field name"
-                      class="input input-bordered"
-                      required />
-                  </label>
+            <label for="location" class="flex flex-col gap-2">
+              <span class="text-base font-semibold">Location</span>
+              <input
+                type="text"
+                id="location"
+                name="location"
+                placeholder="Enter your field name"
+                class="input input-bordered" />
+            </label>
 
-                  <label for="middleName" class="flex flex-col gap-2">
-                    <span class="text-base font-semibold">Middle Name</span>
-                    <input
-                      type="text"
-                      id="middleName"
-                      name="middleName"
-                      placeholder="Enter your field name"
-                      class="input input-md input-bordered" />
-                  </label>
+            <!-- Description -->
+            <label class="flex flex-col gap-2">
+              <span class="text-base font-semibold">Description</span>
+              <textarea
+                class="textarea textarea-bordered h-[150px]"
+                placeholder="Description"></textarea>
+            </label>
 
-                  <label for="lastName" class="flex flex-col gap-2">
-                    <span class="text-base font-semibold">Last Name</span>
-                    <input
-                      type="text"
-                      id="lastName"
-                      name="lastName"
-                      placeholder="Enter your field name"
-                      class="input input-bordered"
-                      required />
-                  </label>
+            <label for="schedule" class="flex flex-col gap-2">
+              <span class="text-base font-semibold">Schedule</span>
+              <input
+                type="date"
+                id="schedule"
+                name="schedule"
+                placeholder="Enter your field name"
+                class="input input-bordered" />
+            </label>
 
-                  <label for="suffix" class="flex flex-col gap-2">
-                    <span class="text-base font-semibold">Suffix</span>
-                    <select
-                      class="select select-bordered"
-                      name="suffix"
-                      id="suffix">
-                      <option value="">Select Suffix</option>
-                      <option value="Jr">Jr.</option>
-                      <option value="Sr">Sr.</option>
-                      <option value="III">III</option>
-                    </select>
-                  </label>
+            <label for="isAllDay" class="flex gap-4">
+              <input
+                type="checkbox"
+                id="isAllDay"
+                name="isAllDay"
+                class="toggle" />
 
-                  <label for="field-1" class="flex flex-col gap-2">
-                    <span class="text-base font-semibold">Age</span>
-                    <input
-                      type="number"
-                      id="age"
-                      name="age"
-                      placeholder="Enter your field name"
-                      class="input input-bordered" />
-                  </label>
+              <span class="text-base font-semibold">All Day</span>
+            </label>
+          </div>
 
-                  <label for="suffix" class="flex flex-col gap-2">
-                    <span class="text-base font-semibold">Gender</span>
-                    <select
-                      class="select select-bordered"
-                      name="gender"
-                      id="gender">
-                      <option value="">Select Gender</option>
-                      <option value="male">Male</option>
-                      <option value="female">Female</option>
-                      <option value="Other">Others</option>
-                    </select>
-                  </label>
+          <div>
+            <label for="member" class="flex flex-col gap-2">
+              <span class="text-base font-semibold">Add members</span>
+              <input
+                type="text"
+                id="member"
+                name="member"
+                placeholder="Enter your field name"
+                class="input input-bordered" />
+            </label>
 
-                  <label for="field-1" class="flex flex-col gap-2">
-                    <span class="text-base font-semibold">Bith Date</span>
-                    <input
-                      type="date"
-                      id="bod"
-                      name="bod"
-                      placeholder="Enter your field name"
-                      class="input input-bordered" />
-                  </label>
-                </div>
-
-                <!-- Roles -->
-                <div class="flex flex-col gap-2">
-                  <span class="text-base font-semibold">Roles</span>
-                  <div class="flex gap-2">
-                    <label for="admin" class="flex gap-2 items-center">
-                      <input
-                        type="checkbox"
-                        id="admin"
-                        name="admin"
-                        class="checkbox checkbox-sm" />
-                      <span class="text-[14px]">Admin</span>
-                    </label>
-
-                    <label for="user" class="flex gap-2 items-center">
-                      <input
-                        type="checkbox"
-                        id="user"
-                        name="user"
-                        class="checkbox checkbox-sm" />
-                      <span class="text-[14px]">User</span>
-                    </label>
+            <div class="flex justify-between items-center mt-4">
+              <div class="avatar-group -space-x-6 rtl:space-x-reverse w-full">
+                <div class="avatar">
+                  <div class="w-8">
+                    <img
+                      src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
                   </div>
                 </div>
-
-                <!-- Description -->
-                <label class="flex flex-col gap-2">
-                  <span class="text-base font-semibold">Biography</span>
-                  <textarea
-                    class="textarea textarea-bordered h-[150px]"
-                    placeholder="Description"></textarea>
-                </label>
+                <div class="avatar">
+                  <div class="w-8">
+                    <img
+                      src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                  </div>
+                </div>
+                <div class="avatar">
+                  <div class="w-8">
+                    <img
+                      src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                  </div>
+                </div>
+                <div class="avatar placeholder">
+                  <div class="w-8 bg-neutral text-neutral-content">
+                    <span>+99</span>
+                  </div>
+                </div>
               </div>
+              <button
+                class="bg-primary text-[14px] font-semibold px-2 py-[10px] border rounded-[5px] w-[150px] text-white">
+                <i class="fa-solid fa-plus"></i>
+                Add Guest
+              </button>
             </div>
           </div>
 
-          <!-- Accordion 2 -->
-          <div class="border-b mb-4">
-            <div class="collapse collapse-arrow">
-              <input type="radio" name="my-accordion-2" />
-              <div
-                class="collapse-title px-0 text-[16px] text-gray-400 font-medium hover:bg-gray-400">
-                Additional Info
-              </div>
-              <div class="collapse-content px-0 text-black">
-                <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
-                  <label for="field-1" class="flex flex-col gap-2">
-                    <span class="text-base font-semibold">Field 1</span>
-                    <input
-                      type="text"
-                      id="field-1"
-                      name="field-1"
-                      placeholder="Enter your field name"
-                      class="input input-bordered" />
-                  </label>
+          <label for="location" class="flex flex-col gap-2">
+            <span class="text-base font-semibold">Tag Color</span>
 
-                  <label for="field-1" class="flex flex-col gap-2">
-                    <span class="text-base font-semibold">Field 1</span>
-                    <input
-                      type="text"
-                      id="field-1"
-                      name="field-1"
-                      placeholder="Enter your field name"
-                      class="input input-bordered" />
-                  </label>
-
-                  <label for="field-1" class="flex flex-col gap-2">
-                    <span class="text-base font-semibold">Field 1</span>
-                    <input
-                      type="text"
-                      id="field-1"
-                      name="field-1"
-                      placeholder="Enter your field name"
-                      class="input input-bordered" />
-                  </label>
-
-                  <label for="field-1" class="flex flex-col gap-2">
-                    <span class="text-base font-semibold">Field 1</span>
-                    <input
-                      type="text"
-                      id="field-1"
-                      name="field-1"
-                      placeholder="Enter your field name"
-                      class="input input-bordered" />
-                  </label>
-                </div>
-              </div>
+            <div>
+              <input
+                type="radio"
+                id="color"
+                name="color"
+                class="radio bg-green-500" />
+              <input
+                type="radio"
+                id="color"
+                name="color"
+                class="radio bg-red-500" />
+              <input
+                type="radio"
+                id="color"
+                name="color"
+                class="radio bg-blue-500" />
+              <input
+                type="radio"
+                id="color"
+                name="color"
+                class="radio bg-yellow-500" />
+              <input
+                type="radio"
+                id="color"
+                name="color"
+                class="radio bg-orange-500" />
+              <input
+                type="radio"
+                id="color"
+                name="color"
+                class="radio bg-pink-500" />
             </div>
-          </div>
-
-          <!-- Actions -->
+          </label>
 
           <div
             class="flex justify-between flex-col md:flex-row gap-4 items-center">
